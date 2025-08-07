@@ -1,0 +1,10 @@
+CREATE TABLE FeatureToggle (
+    name TEXT NOT NULL PRIMARY KEY,
+    enabled INTEGER AS Boolean NOT NULL
+);
+
+selectAll:
+SELECT * FROM FeatureToggle;
+
+insert:
+INSERT OR REPLACE INTO FeatureToggle (name, enabled) VALUES (?, ?);
